@@ -11,6 +11,10 @@
   ],
   "activationEvents": [],
   "main": "./out/extension.js",
+  "exportConfig": {
+    "type": "webview",
+    "toggleActivity": "Comand A"
+  },
   "contributes": {
     "commands": [
       {
@@ -37,7 +41,34 @@
         "mac": "cmd+f1",
         "when": "editorTextFocus"
       }
-    ]
+    ],
+    "configuration": {
+      "title": "Sub for Main Config",
+      "properties": {
+        "appworks.materialSources": {
+          "type": "array",
+          "default": [],
+          "description": "AppWorks materialSources"
+        },
+        "appworks.workspace": {
+          "type": "string",
+          "default": "",
+          "description": "AppWorks workspace"
+        },
+        "myExtension.type": {
+          "type": "string",
+          "default": "webview",
+          "description": "My extension type",
+          "readOnly": true
+        },
+        "myExtension.activityCommand": {
+          "type": "string",
+          "default": "myworks-sub.start",
+          "description": "My extension type",
+          "readOnly": true
+        }
+      }
+    }
   },
   "scripts": {
     "vscode:prepublish": "npm run compile",
