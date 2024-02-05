@@ -1,5 +1,5 @@
 {
-  "name": "test",
+  "name": "letter-demo-wf-test",
   "displayName": "demo-plugin",
   "description": "study",
   "version": "0.2.0",
@@ -10,6 +10,10 @@
   "categories": [
     "Other"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/letterletter/demo-plugin.git"
+  },
   "activationEvents": [],
   "main": "./out/extension.js",
   "exportConfig": {
@@ -19,7 +23,7 @@
   "contributes": {
     "commands": [
       {
-        "command": "test.helloWorld",
+        "command": "ddd.helloWorld",
         "title": "Hello World"
       }
     ],
@@ -60,13 +64,17 @@
           "type": "string",
           "default": "webview",
           "description": "My extension type",
-          "readOnly": true
         },
         "myExtension.activityCommand": {
           "type": "string",
           "default": "myworks-sub.start",
           "description": "My extension type",
           "readOnly": true
+        },
+        "myExtension.fieldletter": {
+          "type": "string",
+          "default": "dddddddddd",
+          "description": "My extension type"
         }
       }
     }
