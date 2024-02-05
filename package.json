@@ -63,7 +63,7 @@
         "myExtension.type": {
           "type": "string",
           "default": "webview",
-          "description": "My extension type",
+          "description": "My extension type"
         },
         "myExtension.activityCommand": {
           "type": "string",
@@ -71,7 +71,7 @@
           "description": "My extension type",
           "readOnly": true
         },
-        "myExtension.fieldletter": {
+        "myExtension.WYX": {
           "type": "string",
           "default": "dddddddddd",
           "description": "My extension type"
