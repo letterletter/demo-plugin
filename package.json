@@ -2,11 +2,17 @@
   "name": "letter-demo-wf-test",
   "displayName": "demo-plugin",
   "description": "study",
-  "version": "0.2.0",
+  "version": "0.3.1",
   "engines": {
     "vscode": "^1.85.0"
   },
+  "shortCut": "TestSimple",
+  "availconf": {
+    "debug": "testLetter.hello.debug",
+    "activate": "testLetter.hello.start"
+  },
   "publisher": "letterletter",
+  
   "categories": [
     "Other"
   ],
@@ -23,8 +29,12 @@
   "contributes": {
     "commands": [
       {
-        "command": "ddd.helloWorld",
+        "command": "testLetter.hello.start",
         "title": "Hello World"
+      },
+      {
+        "command": "testLetter.hello.debug",
+        "title": "Hello Debug"
       }
     ],
     "customEditors": [
@@ -75,6 +85,17 @@
           "type": "string",
           "default": "dddddddddd",
           "description": "My extension type"
+        },
+        "TestSimple.activate": {
+          "type": "string",
+          "default": "testLetter.hello.start",
+          "description": "activate command",
+          "readOnly": true
+        },
+        "TestSimple.debug": {
+          "type": "string",
+          "default": "testLetter.hello.debug",
+          "description": "debug command"
         }
       }
     }

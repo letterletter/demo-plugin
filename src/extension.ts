@@ -13,12 +13,17 @@ export function activate(context: vscode.ExtensionContext) {
 	// The command has been defined in the package.json file
 	// Now provide the implementation of the command with registerCommand
 	// The commandId parameter must match the command field in package.json
-	let disposable = vscode.commands.registerCommand('ddd.helloWorld', () => {
+	let disposable = vscode.commands.registerCommand('testLetter.hello.start', () => {
 		// The code you place here will be executed every time your command is executed
 		// Display a message box to the user
-		vscode.window.showInformationMessage('Hello World from demo-plugin-letter 222!');
+		vscode.window.showInformationMessage('Hello World from demo-plugin-letter hello!');
 	});
 
+	let disposable2 = vscode.commands.registerCommand('testLetter.hello.debug', () => {
+		// The code you place here will be executed every time your command is executed
+		// Display a message box to the user
+		vscode.window.showInformationMessage('Hello World debug !!!!from demo-plugin-letter hello!');
+	});
 	context.subscriptions.push(disposable);
 }
 
